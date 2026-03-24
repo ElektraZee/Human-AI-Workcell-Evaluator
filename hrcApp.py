@@ -12,7 +12,6 @@ st.caption("Industry 5.0 Human-Centric Decision Simulation")
 #slide bar configuration
 st.sidebar.header("Simulation Settings")
 
-
 p_machine = st.sidebar.slider("Machine Accuracy", 0.5, 1.0, 0.85)
 p_human = st.sidebar.slider("Human Accuracy", 0.5, 1.0, 0.95)
 t_machine = st.sidebar.slider("Machine Cycle Time (sec)", 0.1, 2.0, 1.0)
@@ -21,6 +20,15 @@ uncertainty_threshold = st.sidebar.slider("Human Override Threshold", 0.01, 0.5,
 noise = st.sidebar.slider("Noise Level", 0.0, 0.25, 0.05)
 n_parts = st.sidebar.slider("Number of Parts", 20, 1000, 200)
 
+sim = WorkCellSimulation(
+    p_machine=p_machine,
+    p_human=p_human,
+    t_machine=t_machine,
+    t_override=t_override,
+    uncertainty_threshold=uncertainty_threshold,
+    noise=noise,
+    n_parts=n_parts
+)
 
 #run simulation
 run = st.button("Run Simulation")
