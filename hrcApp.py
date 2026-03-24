@@ -17,7 +17,7 @@ p_human = st.sidebar.slider("Human Accuracy", 0.5, 1.0, 0.95)
 t_machine = st.sidebar.slider("Machine Cycle Time (sec)", 0.1, 2.0, 1.0)
 t_override = st.sidebar.slider("Human Override Time (sec)", 0.1, 2.0, 0.5)
 uncertainty_threshold = st.sidebar.slider("Human Override Threshold", 0.01, 0.5, 0.15)
-noise = st.sidebar.slider("Noise Level", 0.0, 0.25, 0.05)
+noise_threshold = st.sidebar.slider("Noise Level", 0.0, 0.25, 0.05)
 n_parts = st.sidebar.slider("Number of Parts", 20, 1000, 200)
 
 sim = WorkCellSimulation(
