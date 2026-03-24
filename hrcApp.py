@@ -26,7 +26,7 @@ sim = WorkCellSimulation(
     t_machine=t_machine,
     t_override=t_override,
     uncertainty_threshold=uncertainty_threshold,
-    noise=noise,
+    noise_threshold=noise_threshold,
     n_parts=n_parts
 )
 
