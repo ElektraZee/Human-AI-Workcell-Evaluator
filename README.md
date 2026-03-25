@@ -38,7 +38,27 @@ The Human–AI Workcell Evaluator provides:
 
 ---
 ## Architecture Diagram
-User → Sreamlit IU → Simulation Engine → Decision Logic → KPIs → Charts
+```mermaid
+---
+config:
+  theme: neo-dark
+  look: neo
+---
+graph LR
+    User[User]
+    StreamlitUI[Streamlit UI]
+    SimulationEngine[Simulation Engine]
+    DecisionLogic[Decision Logic]
+    KPIs[KPIs]
+    Charts[Charts]
+    
+    User -->|Inputs| StreamlitUI
+    StreamlitUI -->|Triggers| SimulationEngine
+    SimulationEngine -->|Data| DecisionLogic
+    DecisionLogic -->|Results| KPIs
+    KPIs -->|Metrics| Charts
+    Charts -->|Display| StreamlitUI
+```
 
 ---
 
@@ -74,7 +94,7 @@ cd human-ai-workcell-evaluator
 pip install -r requirements.txt
 
 ##Run the Application
-streamlit run app.py
+streamlit run hrcApp.py
 ```
 ---
 
