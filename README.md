@@ -71,7 +71,6 @@ Simple, transparent models:
 - Noise-based variability  
 - Simulation over many parts (Monte Carlo style)  
 
-No formulas are required because the research paper provides **conceptual direction**, not mathematical expressions.
 
 ---
 
